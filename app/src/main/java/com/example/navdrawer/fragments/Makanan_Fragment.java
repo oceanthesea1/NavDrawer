@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -39,25 +38,25 @@ public class Makanan_Fragment extends Fragment implements MyAdapter.OnItemClickL
         Item item1 = new Item();
         item1.setName("Gudeg");
         item1.setDesc("this is Desc Gudeg");
-        item1.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item1.setImage("https://img-global.cpcdn.com/recipes/a8d0ffc50429e676/400x400cq70/photo.jpg");
         listData.add(item1);
 
         Item item2 = new Item();
-        item2.setName("Gudeg");
-        item2.setDesc("this is Desc Gudeg");
-        item2.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item2.setName("Bakpia Pathok");
+        item2.setDesc("this is Desc Bakpia");
+        item2.setImage("https://harianejogja.com/file/2023/01/4-11.webp");
         listData.add(item2);
 
         Item item3 = new Item();
-        item3.setName("Gudeg");
-        item3.setDesc("this is Desc Gudeg");
-        item3.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item3.setName("Sate Klathak");
+        item3.setDesc("this is Desc Sate");
+        item3.setImage("https://www.warisankuliner.com/gfx/recipes/1362118604.jpg");
         listData.add(item3);
 
         Item item4 = new Item();
-        item4.setName("Gudeg");
-        item4.setDesc("this is Desc Gudeg");
-        item4.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item4.setName("Mie Lethek");
+        item4.setDesc("this is Desc Mie");
+        item4.setImage("https://img.kurio.network/BxQdyJ2Ry5KcSeyeLstleIlAkt4=/320x320/filters:quality(80)/https://kurio-img.kurioapps.com/21/12/02/36af7dfc-7448-4f88-ae9b-a795b6a341a1.jpe");
         listData.add(item4);
 
         adapter = new MyAdapter(getContext(), listData);
@@ -70,44 +69,13 @@ public class Makanan_Fragment extends Fragment implements MyAdapter.OnItemClickL
 
     @Override
     public void onItemClick(int position) {
-        if (position == 0) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else if (position == 1) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else if (position == 2) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else if (position == 3) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else {
-            Toast.makeText(requireContext(), "Item clicked: " + position, Toast.LENGTH_SHORT).show();
-        }
+        String name = listData.get(position).getName();
+        String desc = listData.get(position).getDesc();
+        Intent intent = new Intent(requireContext(), Info.class);
+        intent.putExtra("nameInfo", name);
+        intent.putExtra("descInfo", desc);
+        String imageLink = listData.get(position).getImage();
+        intent.putExtra("imageInfo", imageLink);
+        startActivity(intent);
     }
 }

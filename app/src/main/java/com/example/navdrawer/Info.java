@@ -18,13 +18,13 @@ import com.bumptech.glide.Glide;
 
 public class Info extends AppCompatActivity {
 
+    TextView textName, textDesc;
+    ImageView imageInfo, backArrow;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-
-        TextView textName, textDesc;
-        ImageView imageInfo, backArrow;
 
         textName = findViewById(R.id.textName);
         textDesc = findViewById(R.id.textDesc);

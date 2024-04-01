@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -70,44 +69,13 @@ public class Makanan_Fav_Fragment extends Fragment implements MyAdapter.OnItemCl
 
     @Override
     public void onItemClick(int position) {
-        if (position == 0) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else if (position == 1) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else if (position == 2) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else if (position == 3) {
-            String name = listData.get(position).getName();
-            String desc = listData.get(position).getDesc();
-            Intent intent = new Intent(requireContext(), Info.class);
-            intent.putExtra("nameInfo", name);
-            intent.putExtra("descInfo", desc);
-            String imageLink = listData.get(position).getImage();
-            intent.putExtra("imageInfo", imageLink);
-            startActivity(intent);
-        } else {
-            Toast.makeText(requireContext(), "Item clicked: " + position, Toast.LENGTH_SHORT).show();
-        }
+        String name = listData.get(position).getName();
+        String desc = listData.get(position).getDesc();
+        Intent intent = new Intent(requireContext(), Info.class);
+        intent.putExtra("nameInfo", name);
+        intent.putExtra("descInfo", desc);
+        String imageLink = listData.get(position).getImage();
+        intent.putExtra("imageInfo", imageLink);
+        startActivity(intent);
     }
 }

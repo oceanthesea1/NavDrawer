@@ -50,8 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 int itemId = item.getItemId();
 
                 if (itemId == R.id.menu_makanan) {
-                    showHomePage();
-                    getSupportActionBar().setTitle("Makanan Page");
+                    getSupportFragmentManager().beginTransaction()
+                            .replace(R.id.content_frame, new Makanan_Fragment())
+                            .commit();
+                    getSupportActionBar().setTitle("Minuman Page");
                 }
                 else if (itemId == R.id.menu_minuman) {
                     getSupportFragmentManager().beginTransaction()
