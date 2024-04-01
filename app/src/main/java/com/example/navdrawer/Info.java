@@ -24,11 +24,12 @@ public class Info extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
         TextView textName, textDesc;
-        ImageView imageInfo;
+        ImageView imageInfo, backArrow;
 
         textName = findViewById(R.id.textName);
         textDesc = findViewById(R.id.textDesc);
         imageInfo = findViewById(R.id.imageInfo);
+        backArrow = findViewById(R.id.buttonBack);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("nameInfo");
@@ -41,5 +42,10 @@ public class Info extends AppCompatActivity {
         Glide.with(this)
                 .load(image)
                 .into(imageInfo);
+
+        backArrow.setOnClickListener(v -> {
+            Intent intentBack = new Intent(Info.this, MainActivity.class);
+            startActivity(intentBack);
+        });
     }
 }

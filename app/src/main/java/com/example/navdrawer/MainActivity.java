@@ -90,6 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.content_frame, new Makanan_Fragment())
                 .commit();
 
-        getSupportActionBar().setTitle("Home Page");
+        getSupportActionBar().setTitle("Makanan Page");
     }
 }
