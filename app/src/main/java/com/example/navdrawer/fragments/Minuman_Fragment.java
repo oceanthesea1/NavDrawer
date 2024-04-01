@@ -76,7 +76,6 @@ public class Minuman_Fragment extends Fragment implements MyAdapter.OnItemClickL
         intent.putExtra("descInfo", desc);
         String imageLink = listData.get(position).getImage();
         intent.putExtra("imageInfo", imageLink);
-        intent.putExtra("fragmentBack", "minumanFragment");
         startActivity(intent);
     }
 }

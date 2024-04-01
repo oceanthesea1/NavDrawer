@@ -34,29 +34,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        String fragmentName = getIntent().getStringExtra("fragmentBack");
-        Fragment fragmentBack = null;
-
         showHomePage();
-
-        if ("makananFragment".equals(fragmentName)) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new Makanan_Fragment())
-                    .commit();
-            getSupportActionBar().setTitle("Makanan Page");
-        } else if ("minumanFragment".equals(fragmentName)) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new Minuman_Fragment())
-                    .commit();
-            getSupportActionBar().setTitle("Minuman Page");
-        } else if ("makananFavFragment".equals(fragmentBack)) {
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.content_frame, new Makanan_Fav_Fragment())
-                    .commit();
-            getSupportActionBar().setTitle("Makanan Fav Page");
-        } else {
-            showHomePage();
-        }
 
         drawerLayout = findViewById(R.id.drawer_layout);
         toggle = new ActionBarDrawerToggle(

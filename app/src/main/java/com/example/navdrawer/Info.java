@@ -35,7 +35,6 @@ public class Info extends AppCompatActivity {
         String name = intent.getStringExtra("nameInfo");
         String desc = intent.getStringExtra("descInfo");
         String image = intent.getStringExtra("imageInfo");
-        String fragmentBack = intent.getStringExtra("fragmentBack");
 
         textName.setText(name);
         textDesc.setText(desc);
@@ -45,9 +44,7 @@ public class Info extends AppCompatActivity {
                 .into(imageInfo);
 
         backArrow.setOnClickListener(v -> {
-            Intent intentBack = new Intent(Info.this, MainActivity.class);
-            intentBack.putExtra("fragmentBack", fragmentBack);
-            startActivity(intentBack);
+            finish();
         });
     }
 }

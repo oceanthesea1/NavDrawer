@@ -76,7 +76,6 @@ public class Makanan_Fav_Fragment extends Fragment implements MyAdapter.OnItemCl
         intent.putExtra("descInfo", desc);
         String imageLink = listData.get(position).getImage();
         intent.putExtra("imageInfo", imageLink);
-        intent.putExtra("fragmentBack", "makananFavFragment");
         startActivity(intent);
     }
 }
