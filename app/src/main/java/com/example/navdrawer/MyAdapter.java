@@ -46,7 +46,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HolderData> {
     public void onBindViewHolder(@NonNull MyAdapter.HolderData holder, int position) {
         Item item = listData.get(position);
         holder.textName.setText(item.getName());
-        holder.textDesc.setText(item.getDesc());
+        holder.textDescShort.setText(item.getDescShort());
 
         Glide.with(holder.itemView.getContext())
                 .load(item.getImage())
@@ -70,14 +70,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HolderData> {
     public class HolderData extends RecyclerView.ViewHolder{
 
         TextView textName;
-        TextView textDesc;
+        TextView textDescShort;
         ImageView imageView;
 
         public HolderData(@NonNull View itemView) {
             super(itemView);
 
             textName = itemView.findViewById(R.id.foodNameView);
-            textDesc = itemView.findViewById(R.id.foodDescView);
+            textDescShort = itemView.findViewById(R.id.foodDescView);
             imageView = itemView.findViewById(R.id.imageView);
         }
     }

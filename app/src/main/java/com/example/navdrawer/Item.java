@@ -2,11 +2,12 @@ package com.example.navdrawer;
 
 public class Item {
 
-    String name, desc, image;
+    String name, descShort, descLong, image;
 
     public Item() {
         this.name = name;
-        this.desc = desc;
+        this.descShort = descShort;
+        this.descLong = descLong;
         this.image = image;
     }
 
@@ -18,12 +19,20 @@ public class Item {
         this.name = name;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescShort() {
+        return descShort;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescShort(String descShort) {
+        this.descShort = descShort;
+    }
+
+    public String getDescLong() {
+        return descLong;
+    }
+
+    public void setDescLong(String descLong) {
+        this.descLong = descLong;
     }
 
     public String getImage() {

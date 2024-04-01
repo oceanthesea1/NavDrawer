@@ -37,25 +37,29 @@ public class Makanan_Fav_Fragment extends Fragment implements MyAdapter.OnItemCl
 
         Item item1 = new Item();
         item1.setName("Tempura");
-        item1.setDesc("this is Desc Tempura");
+        item1.setDescShort("this is Desc Tempura");
+        item1.setDescLong("yy");
         item1.setImage("https://umamidays.com/wp-content/uploads/2022/08/ebi-tempura.jpg");
         listData.add(item1);
 
         Item item2 = new Item();
         item2.setName("Gyoza");
-        item2.setDesc("this is Desc Gyoza");
+        item2.setDescShort("this is Desc Gyoza");
+        item2.setDescLong("yy");
         item2.setImage("https://assets.epicurious.com/photos/628ba0d3fa016bab2139efa2/1:1/w_4546,h_4546,c_limit/Gyoza_RECIPE_051922_34332.jpg");
         listData.add(item2);
 
         Item item3 = new Item();
         item3.setName("Ice Cream");
-        item3.setDesc("this is Desc Ice");
+        item3.setDescShort("this is Desc Ice");
+        item3.setDescLong("yy");
         item3.setImage("https://static01.nyt.com/images/2017/06/12/dining/00Icecream12/00Icecream12-square640.jpg");
         listData.add(item3);
 
         Item item4 = new Item();
         item4.setName("Pineapple Pizza");
-        item4.setDesc("this is Desc Pizza");
+        item4.setDescShort("this is Desc Pizza");
+        item4.setDescLong("yy");
         item4.setImage("https://thecozycook.com/wp-content/uploads/2023/10/Hawaiian-Pizza-f.jpg");
         listData.add(item4);
 
@@ -70,10 +74,10 @@ public class Makanan_Fav_Fragment extends Fragment implements MyAdapter.OnItemCl
     @Override
     public void onItemClick(int position) {
         String name = listData.get(position).getName();
-        String desc = listData.get(position).getDesc();
+        String descLong = listData.get(position).getDescLong();
         Intent intent = new Intent(requireContext(), Info.class);
         intent.putExtra("nameInfo", name);
-        intent.putExtra("descInfo", desc);
+        intent.putExtra("descInfo", descLong);
         String imageLink = listData.get(position).getImage();
         intent.putExtra("imageInfo", imageLink);
         startActivity(intent);

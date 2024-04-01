@@ -18,7 +18,7 @@ import com.bumptech.glide.Glide;
 
 public class Info extends AppCompatActivity {
 
-    TextView textName, textDesc;
+    TextView textName, textDescLong;
     ImageView imageInfo, backArrow;
 
     @Override
@@ -27,17 +27,17 @@ public class Info extends AppCompatActivity {
         setContentView(R.layout.activity_info);
 
         textName = findViewById(R.id.textName);
-        textDesc = findViewById(R.id.textDesc);
+        textDescLong = findViewById(R.id.textDesc);
         imageInfo = findViewById(R.id.imageInfo);
         backArrow = findViewById(R.id.buttonBack);
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("nameInfo");
-        String desc = intent.getStringExtra("descInfo");
+        String descLong = intent.getStringExtra("descInfo");
         String image = intent.getStringExtra("imageInfo");
 
         textName.setText(name);
-        textDesc.setText(desc);
+        textDescLong.setText(descLong);
 
         Glide.with(this)
                 .load(image)
