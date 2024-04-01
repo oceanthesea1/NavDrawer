@@ -1,6 +1,8 @@
 package com.example.navdrawer;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +20,17 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HolderData> {
 
     List<Item> listData;
     LayoutInflater inflater;
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
+    }
+
+    private OnItemClickListener listener;
+
+    // Add a setter for the listener
+    public void setOnItemClickListener(OnItemClickListener listener) {
+        this.listener = listener;
+    }
 
     public MyAdapter(Context context, List<Item> listData) {
         this.listData = listData;
@@ -41,6 +54,14 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HolderData> {
                 .load(item.getImage())
                 .into(holder.imageView);
 
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (listener != null) {
+                    listener.onItemClick(holder.getAdapterPosition());
+                }
+            }
+        });
     }
 
     @Override
@@ -62,5 +83,4 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.HolderData> {
             imageView = itemView.findViewById(R.id.imageView);
         }
     }
-
 }
