@@ -36,27 +36,27 @@ public class Minuman_Fragment extends Fragment implements MyAdapter.OnItemClickL
         listData = new ArrayList<>();
 
         Item item1 = new Item();
-        item1.setName("Es Teh");
-        item1.setDesc("this is Desc Teh");
-        item1.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item1.setName("Wedang Uwuh");
+        item1.setDesc("this is Desc wedang");
+        item1.setImage("https://cdn.idntimes.com/content-images/post/20210706/wedang-uwuh-48fe8f7479a6ecc09f4b3425eb4add59.jpg");
         listData.add(item1);
 
         Item item2 = new Item();
-        item2.setName("Gudeg");
-        item2.setDesc("this is Desc Gudeg");
-        item2.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item2.setName("Es Semlo");
+        item2.setDesc("this is Desc Es");
+        item2.setImage("https://cdn.idntimes.com/content-images/community/2020/11/25016012-169005777187038-7152227309372571648-n-c81ddb9dc663a299485efc307f0b05d9.jpg");
         listData.add(item2);
 
         Item item3 = new Item();
-        item3.setName("Gudeg");
-        item3.setDesc("this is Desc Gudeg");
-        item3.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item3.setName("Kopi Joss");
+        item3.setDesc("this is Desc Kopi");
+        item3.setImage("https://awsimages.detik.net.id/community/media/visual/2021/06/24/kopi-joss-populer-di-yogyakarta-1.jpeg?w=1080");
         listData.add(item3);
 
         Item item4 = new Item();
-        item4.setName("Gudeg");
-        item4.setDesc("this is Desc Gudeg");
-        item4.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item4.setName("Es Jaipong");
+        item4.setDesc("this is Desc Es 2");
+        item4.setImage("https://cdn.idntimes.com/content-images/community/2022/08/fromandroid-ca2275a7fee3963c0210a0f915c3554c.jpg");
         listData.add(item4);
 
         adapter = new MyAdapter(getContext(), listData);
@@ -76,6 +76,7 @@ public class Minuman_Fragment extends Fragment implements MyAdapter.OnItemClickL
         intent.putExtra("descInfo", desc);
         String imageLink = listData.get(position).getImage();
         intent.putExtra("imageInfo", imageLink);
+        intent.putExtra("fragmentBack", "minumanFragment");
         startActivity(intent);
     }
 }

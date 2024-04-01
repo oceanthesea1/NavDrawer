@@ -36,27 +36,27 @@ public class Makanan_Fav_Fragment extends Fragment implements MyAdapter.OnItemCl
         listData = new ArrayList<>();
 
         Item item1 = new Item();
-        item1.setName("French Fries");
-        item1.setDesc("this is Desc Fries");
-        item1.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item1.setName("Tempura");
+        item1.setDesc("this is Desc Tempura");
+        item1.setImage("https://umamidays.com/wp-content/uploads/2022/08/ebi-tempura.jpg");
         listData.add(item1);
 
         Item item2 = new Item();
-        item2.setName("Gudeg");
-        item2.setDesc("this is Desc Gudeg");
-        item2.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item2.setName("Gyoza");
+        item2.setDesc("this is Desc Gyoza");
+        item2.setImage("https://assets.epicurious.com/photos/628ba0d3fa016bab2139efa2/1:1/w_4546,h_4546,c_limit/Gyoza_RECIPE_051922_34332.jpg");
         listData.add(item2);
 
         Item item3 = new Item();
-        item3.setName("Gudeg");
-        item3.setDesc("this is Desc Gudeg");
-        item3.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item3.setName("Ice Cream");
+        item3.setDesc("this is Desc Ice");
+        item3.setImage("https://static01.nyt.com/images/2017/06/12/dining/00Icecream12/00Icecream12-square640.jpg");
         listData.add(item3);
 
         Item item4 = new Item();
-        item4.setName("Gudeg");
-        item4.setDesc("this is Desc Gudeg");
-        item4.setImage("https://cdn.icon-icons.com/icons2/562/PNG/512/rounded-corners-square_icon-icons.com_53894.png");
+        item4.setName("Pineapple Pizza");
+        item4.setDesc("this is Desc Pizza");
+        item4.setImage("https://thecozycook.com/wp-content/uploads/2023/10/Hawaiian-Pizza-f.jpg");
         listData.add(item4);
 
         adapter = new MyAdapter(getContext(), listData);
@@ -76,6 +76,7 @@ public class Makanan_Fav_Fragment extends Fragment implements MyAdapter.OnItemCl
         intent.putExtra("descInfo", desc);
         String imageLink = listData.get(position).getImage();
         intent.putExtra("imageInfo", imageLink);
+        intent.putExtra("fragmentBack", "makananFavFragment");
         startActivity(intent);
     }
 }
