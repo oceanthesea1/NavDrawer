@@ -14,25 +14,35 @@
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="70dp"
         android:layout_marginLeft="20dp"
         android:src="@drawable/baseline_arrow_back_24" />
 
-    <ImageView
-        android:id="@+id/imageInfo"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="70dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/round_corner"
-        android:clipToOutline="true"
-        android:scaleType="fitXY"
-        android:adjustViewBounds="true"
-        android:layout_gravity="center" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/border_info"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageInfo"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_margin="14dp"
+            android:background="@drawable/round_corner"
+            android:clipToOutline="true"
+            android:scaleType="fitXY"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:layout_marginBottom="50dp"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
