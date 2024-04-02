@@ -37,29 +37,29 @@ public class Makanan_Fav_Fragment extends Fragment implements MyAdapter.OnItemCl
 
         Item item1 = new Item();
         item1.setName("Tempura");
-        item1.setDescShort("this is Desc Tempura");
-        item1.setDescLong("yy");
+        item1.setDescShort("Makanan dengan tekstur yang memikat dan kulit yang krispy");
+        item1.setDescLong("Tempura adalah hidangan Jepang yang terkenal akan kelezatannya di seluruh dunia. Hidangan ini terdiri dari bahan-bahan seperti udang, sayuran, telur, atau ikan yang dicelupkan ke dalam adonan tepung yang ringan dan kemudian digoreng hingga menjadi renyah dan berwarna keemasan. Proses penggorengan ini menjadikan Tempura memiliki tekstur renyah di luar namun tetap lembut di dalam. ");
         item1.setImage("https://umamidays.com/wp-content/uploads/2022/08/ebi-tempura.jpg");
         listData.add(item1);
 
         Item item2 = new Item();
         item2.setName("Gyoza");
-        item2.setDescShort("this is Desc Gyoza");
-        item2.setDescLong("yy");
+        item2.setDescShort("Hidangan dengan kulit tipis berisi daging cincang");
+        item2.setDescLong("Gyoza adalah hidangan Jepang yang terdiri dari kulit tipis yang dibungkuskan mengelilingi isian daging cincang atau sayuran, kemudian digoreng atau direbus. Dengan rasa gurih dan tekstur renyah di luar serta juicy di dalamnya, Gyoza sering disajikan dengan saus spesial yang memberikan sentuhan khas. Isian Gyoza bisa beragam, mulai dari daging ayam, udang, hingga campuran sayuran, membuatnya cocok untuk berbagai selera. ");
         item2.setImage("https://assets.epicurious.com/photos/628ba0d3fa016bab2139efa2/1:1/w_4546,h_4546,c_limit/Gyoza_RECIPE_051922_34332.jpg");
         listData.add(item2);
 
         Item item3 = new Item();
         item3.setName("Ice Cream");
-        item3.setDescShort("this is Desc Ice");
-        item3.setDescLong("yy");
+        item3.setDescShort("Hidangan menyegarkan dengan tekstur yang beragam");
+        item3.setDescLong("Es Krim adalah makanan pencuci mulut yang populer yang terbuat dari campuran susu, gula, dan berbagai bahan lainnya yang kemudian dibekukan. Biasanya tersedia dalam berbagai rasa dan tekstur, mulai dari yang lembut dan krimi hingga yang keras dan mengandung potongan-potongan berbagai jenis tambahan seperti buah, kacang-kacangan, atau cokelat. Es Krim sering disajikan dalam cone atau cangkir dan seringkali dihiasi dengan berbagai topping seperti saus, kacang, atau krim. ");
         item3.setImage("https://static01.nyt.com/images/2017/06/12/dining/00Icecream12/00Icecream12-square640.jpg");
         listData.add(item3);
 
         Item item4 = new Item();
         item4.setName("Pineapple Pizza");
-        item4.setDescShort("this is Desc Pizza");
-        item4.setDescLong("yy");
+        item4.setDescShort("The Greatest Pizza");
+        item4.setDescLong("Pineapple Pizza adalah varian pizza yang terkenal dengan tambahan potongan nanas sebagai salah satu toppingnya. Ini merupakan kombinasi dari rasa manis nanas yang segar dan gurihnya keju dan saus tomat pada pizza. Meskipun ada perdebatan tentang apakah kombinasi ini enak atau tidak, banyak orang menikmati rasa unik dan kontras yang ditawarkan oleh pineapple pizza. ");
         item4.setImage("https://thecozycook.com/wp-content/uploads/2023/10/Hawaiian-Pizza-f.jpg");
         listData.add(item4);
 
