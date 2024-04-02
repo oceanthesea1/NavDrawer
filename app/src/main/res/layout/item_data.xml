@@ -43,6 +43,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Food Name"
+                android:textColor="@color/white"
                 android:textSize="30dp" />
 
             <TextView
@@ -51,6 +52,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:text="Food Desc"
+                android:textColor="@color/white"
                 android:textSize="17dp" />
 
         </LinearLayout>

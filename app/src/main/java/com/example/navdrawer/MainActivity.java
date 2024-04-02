@@ -54,18 +54,18 @@ public class MainActivity extends AppCompatActivity {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, new Makanan_Fragment())
                             .commit();
-                    getSupportActionBar().setTitle("Minuman Page");
+                    getSupportActionBar().setTitle("Makanan");
                 }
                 else if (itemId == R.id.menu_minuman) {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, new Minuman_Fragment())
                             .commit();
-                    getSupportActionBar().setTitle("Minuman Page");
+                    getSupportActionBar().setTitle("Minuman");
                 } else {
                     getSupportFragmentManager().beginTransaction()
                             .replace(R.id.content_frame, new Makanan_Fav_Fragment())
                             .commit();
-                    getSupportActionBar().setTitle("MakananFav Page");
+                    getSupportActionBar().setTitle("Makanan Favorit");
                 }
 
                 drawerLayout.closeDrawers();
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
         ImageView imageView = navigationView.getHeaderView(0).findViewById(R.id.imageViewProfile);
 
-        String imageUrl = "https://i.pinimg.com/736x/ea/5c/5c/ea5c5cec244c144c1b2e9de01866907f.jpg";
+        String imageUrl = "https://hololive.hololivepro.com/wp-content/uploads/2024/03/melting.png";
         Glide.with(this)
                 .load(imageUrl)
                 .into(imageView);
@@ -93,6 +93,6 @@ public class MainActivity extends AppCompatActivity {
                 .replace(R.id.content_frame, new Makanan_Fragment())
                 .commit();
 
-        getSupportActionBar().setTitle("Makanan Page");
+        getSupportActionBar().setTitle("Makanan");
     }
 }
